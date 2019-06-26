@@ -3,6 +3,8 @@ title: 'Creating this site'
 date: '2019-06-25'
 ---
 
+![Grass](./images/grass.jpg)
+
 ## Install
 ```
 npm install -g gatsby-cli
