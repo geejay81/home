@@ -475,3 +475,29 @@ module.exports = {
   ]
 }
 ```
+
+## Adding links to Contentful
+
+### Install plugin
+
+```
+npm install --save gatsby-source-contentful
+```
+
+### Configure plugin in gatsby-config.js
+
+```
+{
+  resolve: 'gatsby-source-contentful',
+  options: {
+    spaceId: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+  }
+},
+```
+
+### Install package for rendering Contentful content
+
+```
+npm install @contentful/rich-text-react-renderer
+```
