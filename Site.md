@@ -501,3 +501,44 @@ npm install --save gatsby-source-contentful
 ```
 npm install @contentful/rich-text-react-renderer
 ```
+
+## Set up 404 page
+- Create a 404.js in the pages directory
+
+```
+touch src/pages/404.js
+```
+
+- Add whatever content you want on your page
+
+## Customising Head of document using Helmet
+- Install the plugin
+
+```
+npm install react-helmet gatsby-plugin-react-helmet
+```
+
+- Add to gatsby-config.js plugins
+
+- Add head.js componet
+
+```
+touch src/components/head.js
+```
+
+``` js
+import React from 'react'
+import { Helmet } from 'react-helmet'
+
+const Head = (props) => {
+    return (
+        <Helmet title={props.title} />
+    )
+}
+
+export default Head
+```
+
+- Import in to all pages and render as the first item in Layout page passing in title props
+
+## Deployment
