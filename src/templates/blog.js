@@ -51,18 +51,15 @@ const Blog = (props) => {
     }
 
     return (
-        /*
-        <Layout>
-            <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-            <p>{props.data.markdownRemark.frontmatter.date}</p>
-            <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}}></div>
-        </Layout>
-        */
       <Layout>
-          <Head title={props.data.contentfulBlogPost.title} />
-          <h1>{props.data.contentfulBlogPost.title}</h1>
-          <p>{props.data.contentfulBlogPost.publishedDate}</p>
-          {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
+        <Head title={props.data.contentfulBlogPost.title} />
+        <section className="section">
+          <div className="container">
+            <h1 className="title">{props.data.contentfulBlogPost.title}</h1>
+            <p>{props.data.contentfulBlogPost.publishedDate}</p>
+            {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
+          </div>
+        </section>
       </Layout>
     )
 }
