@@ -7,9 +7,13 @@ const AboutPage = () => {
     return (
         <Layout>
             <Head title="About" />
-            <h1>About Me</h1>
-            <p>I'm Greg Parr, a full-stack developer based in Sussex/Surrey</p>
-            <p>Contact me <Link to="/contact"></Link></p>
+            <section className="section">
+                <div className="container">
+                    <h2 className="title">About Me</h2>
+                    <p>I'm Greg Parr, a full-stack developer based in Sussex/Surrey</p>
+                    <p>Contact me <Link to="/contact"></Link></p>
+                </div>
+            </section>   
         </Layout>
     )
 }

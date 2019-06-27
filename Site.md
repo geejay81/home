@@ -540,5 +540,3 @@ export default Head
 ```
 
 - Import in to all pages and render as the first item in Layout page passing in title props
-
-## Deployment
