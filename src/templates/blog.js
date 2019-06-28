@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Head from '../components/head'
+// import './blog-template.sass'
 
 export const query = graphql`
   query (
@@ -50,7 +51,7 @@ const Blog = (props) => {
             {
               // documentToReactComponents(props.data.contentfulBlogPost.body.json, options)
             }
-            <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+            <div className="content" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
           </div>
         </section>
       </Layout>

@@ -3,18 +3,25 @@ import { Link } from 'gatsby'
 
 const NavBar = () => {
 
+    const handleMenuClick = () => {
+        const burger = document.getElementById('navbar-burger')
+        burger.classList.toggle('is-active')
+        const menu = document.getElementById('navbar-menu')
+        menu.classList.toggle('is-active')
+    }
+
     return (
         <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
-            <div class="container">
+            <div className="container">
                 <div className="navbar-brand">
-                    <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <a id="navbar-burger" role="button" onClick={handleMenuClick} className="navbar-burger" aria-label="menu" aria-expanded="false">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                     </a>
                 </div>
-                <div class="navbar-menu">
-                    <div class="navbar-start">
+                <div id="navbar-menu" className="navbar-menu">
+                    <div className="navbar-start">
                         <Link className="navbar-item" activeClassName="is-active" to="/">Home</Link>
                         <Link className="navbar-item" activeClassName="is-active" to="/blog">Blog</Link>
                         <Link className="navbar-item" activeClassName="is-active" to="/about">About</Link>
