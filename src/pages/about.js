@@ -11,7 +11,7 @@ const AboutPage = () => {
                 <div className="container">
                     <h2 className="title">About Me</h2>
                     <p>I'm Greg Parr, a full-stack developer based in Sussex/Surrey</p>
-                    <p>Contact me <Link to="/contact"></Link></p>
+                    <p><Link to="/contact">Contact me</Link></p>
                 </div>
             </section>   
         </Layout>

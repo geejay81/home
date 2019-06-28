@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+// import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Head from '../components/head'
-// import './blog-template.sass'
+import './blog-template.sass'
 
 export const query = graphql`
   query (
@@ -46,12 +46,19 @@ const Blog = (props) => {
         <Head title={props.data.markdownRemark.frontmatter.title} />
         <section className="section">
           <div className="container">
-            <h1 className="title">{props.data.markdownRemark.frontmatter.title}</h1>
-            <p>{props.data.markdownRemark.frontmatter.date}</p>
-            {
-              // documentToReactComponents(props.data.contentfulBlogPost.body.json, options)
-            }
-            <div className="content" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+            <div className="columns">
+              <div className="column is-two-thirds">
+                <h2 className="title">{props.data.markdownRemark.frontmatter.title}</h2>
+                <p>{props.data.markdownRemark.frontmatter.date}</p>
+                {
+                  // documentToReactComponents(props.data.contentfulBlogPost.body.json, options)
+                }
+                <div className="content" dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
+              </div>
+              <div className="column">
+
+              </div>
+            </div>
           </div>
         </section>
       </Layout>
