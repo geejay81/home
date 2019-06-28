@@ -8,17 +8,18 @@ const BlogPage = () => {
 
     const posts = useStaticQuery(graphql`
       query {
-        allContentfulBlogPost (
-          sort: {
-            fields: publishedDate,
-            order: DESC
-          }
-        ) {
+        allMarkdownRemark (sort: { fields: frontmatter___date, order: DESC }) {
           edges {
             node {
-              title
-              slug
-              publishedDate(formatString:"MMMM Do, YYYY")
+              frontmatter {
+                title
+                date(formatString: "MMMM Do, YYYY")
+                author
+                tags
+              }
+              fields {
+                slug
+              }
             }
           }
         }
@@ -33,15 +34,28 @@ const BlogPage = () => {
               <h2 className="title">Blog</h2>
               <ol className={blogStyles.posts}>
                 {
-                    posts.allContentfulBlogPost.edges.map(post => {
+                    posts.allMarkdownRemark.edges.map(post => {
                         return (
                           <li className="notification">
                             <h3 className="title">
-                              {post.node.title}
+                              {post.node.frontmatter.title}
                             </h3>
-                            <h4 className="subtitle">{post.node.publishedDate}</h4>
+                            <h5 className="subtitle">
+                              {`Posted by ${post.node.frontmatter.author} on ${post.node.frontmatter.date}`}
+                            </h5>
+
+                            <ul className="tags">
+                            {
+                              post.node.frontmatter.tags.map(tag => {
+                                return (
+                                  <li className="tag is-link is-rounded">{tag}</li>
+                                )
+                              })
+                            }
+                            </ul>
+
                             <Link
-                              to={`/blog/${post.node.slug}`}
+                              to={`/blog/${post.node.fields.slug}`}
                               className="button is-primary">
                                 Read
                             </Link>

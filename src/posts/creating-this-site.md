@@ -1,6 +1,8 @@
 ---
 title: 'Creating this site'
 date: '2019-06-25'
+author: 'Greg Parr'
+tags: ['Gatsby','React']
 ---
 
 ![Grass](./images/grass.jpg)
