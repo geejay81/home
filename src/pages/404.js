@@ -9,7 +9,7 @@ const NotFound = () => {
             <Head title="Page not found" />
             <section className="section">
                 <div className="container">
-                    <h2>Page not found</h2>
+                    <h2 className="title">Page not found</h2>
                     <p><Link to="/">Head home</Link></p>
                 </div>
             </section>
