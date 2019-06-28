@@ -7,8 +7,12 @@ const NotFound = () => {
     return (
         <Layout>
             <Head title="Page not found" />
-            <h1>Page not found</h1>
-            <p><Link to="/">Head home</Link></p>
+            <section className="section">
+                <div className="container">
+                    <h2>Page not found</h2>
+                    <p><Link to="/">Head home</Link></p>
+                </div>
+            </section>
         </Layout>
     )
 }
