@@ -9,7 +9,7 @@ const ContactPage = () => {
             <section className="section">
                 <div className="container">
                     <h2 className="title">Contact</h2>
-                    <p>Contact me on twitter at <a href="https://twitter.com/gregparr" target="_blank">@gregparr</a>.</p>
+                    <p>Contact me on twitter at <a href="https://twitter.com/gregparr" target="_blank" rel="noopener noreferrer">@gregparr</a>.</p>
                 </div>
             </section> 
         </Layout>
