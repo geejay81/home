@@ -46,7 +46,9 @@ const BlogPage = () => {
                       <ul className="tags">
                         {post.node.frontmatter.tags.map(tag => {
                           return (
-                            <li className="tag is-link is-rounded">{tag}</li>
+                            <li className="tag is-link is-rounded">
+                              <Link to={`/tags/${tag}`}>{tag}</Link>
+                            </li>
                           )
                         })}
                       </ul>
