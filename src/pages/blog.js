@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import TagsPanel from "../components/tags-panel"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import blogStyles from "./blog.module.sass"
 import Head from "../components/head"
@@ -62,6 +63,7 @@ const BlogPage = () => {
               </ol>
             </div>
             <div className="column">
+              <TagsPanel />
             </div>
           </div>
         </div>
