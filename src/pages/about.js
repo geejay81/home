@@ -9,9 +9,11 @@ const AboutPage = () => {
             <Head title="About" />
             <section className="section">
                 <div className="container">
-                    <h2 className="title">About Me</h2>
-                    <p>I'm Greg Parr, a full-stack developer based in Sussex/Surrey</p>
-                    <p><Link to="/contact">Contact me</Link></p>
+                    <div className="content">
+                        <h2 className="title">About Me</h2>
+                        <p>I'm Greg Parr, a full-stack developer based in Sussex/Surrey</p>
+                        <p><Link to="/contact">Contact me</Link></p>
+                    </div>
                 </div>
             </section>   
         </Layout>
