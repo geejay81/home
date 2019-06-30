@@ -9,9 +9,11 @@ const IndexPage = () => {
             <Head title="Home" />
             <div className="section">
                 <div className="container">
-                    <h2 className="title">Hello</h2>
-                    <h3 className="subtitle">I'm Greg, a full-stack developer living in Sussex.</h3>
-                    <p>Need a developer? <Link to="/contact">Contact Me</Link></p>
+                    <div className="content">
+                        <h2 className="title">Hello</h2>
+                        <h3 className="subtitle">I'm Greg, a full-stack developer living in Sussex.</h3>
+                        <p>Need a developer? <Link to="/contact">Contact Me</Link></p>
+                    </div>
                 </div>
             </div>
         </Layout>

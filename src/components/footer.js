@@ -19,13 +19,13 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="level">
-                    <div className="level-left">
+                    <div className="level-item">
                         &copy; 2019 {data.site.siteMetadata.author}
                     </div>
                     <div className="level-item">
                         <img src={GatsbyLogo} className={footerStyles.footerLogo} alt="Powered by Gatsby" />
                     </div>
-                    <div className="level-right">
+                    <div className="level-item">
                         <img src={BulmaLogo} className={footerStyles.footerLogo} alt="Made with Bulma" />
                     </div>
                 </div>
