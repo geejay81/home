@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faBookOpen, faUser, faComment } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
 
@@ -22,10 +24,18 @@ const NavBar = () => {
                 </div>
                 <div id="navbar-menu" className="navbar-menu">
                     <div className="navbar-start">
-                        <Link className="navbar-item" activeClassName="is-active" to="/">Home</Link>
-                        <Link className="navbar-item" activeClassName="is-active" to="/blog">Blog</Link>
-                        <Link className="navbar-item" activeClassName="is-active" to="/about">About</Link>
-                        <Link className="navbar-item" activeClassName="is-active" to="/contact">Contact</Link>
+                        <Link className="navbar-item" activeClassName="is-active" to="/">
+                            <FontAwesomeIcon icon={faHome} />&nbsp;Home
+                        </Link>
+                        <Link className="navbar-item" activeClassName="is-active" to="/blog">
+                        <FontAwesomeIcon icon={faBookOpen} />&nbsp;Blog
+                        </Link>
+                        <Link className="navbar-item" activeClassName="is-active" to="/about">
+                            <FontAwesomeIcon icon={faUser} />&nbsp;About
+                        </Link>
+                        <Link className="navbar-item" activeClassName="is-active" to="/contact">
+                        <FontAwesomeIcon icon={faComment} />&nbsp;Contact
+                        </Link>
                     </div>
                 </div>
             </div>
