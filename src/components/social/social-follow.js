@@ -1,38 +1,31 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-    faYoutube,
-    faFacebook,
-    faTwitter,
-    faInstagram
-  } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 import socialFollowStyles from './social-follow.module.sass'
 
 const SocialFollow = () => {
     return (
         <div>
             <a
-                href="https://www.youtube.com/channel/UC939nC6M8n05-uAFNdC3AuA"
-                className={`${socialFollowStyles.youtube} ${socialFollowStyles.social}`}
+                href="https://www.linkedin.com/in/greg-parr-26918741/"
+                className={`${socialFollowStyles.linkedin} ${socialFollowStyles.social}`}
+                target="_blank"
             >
-                <FontAwesomeIcon icon={faYoutube} size="2x" />
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
             <a
-                href="https://www.facebook.com/parrgreg"
-                className={`${socialFollowStyles.facebook} ${socialFollowStyles.social}`}
+                href="https://github.com/geejay81"
+                className={`${socialFollowStyles.github} ${socialFollowStyles.social}`}
+                target="_blank"
             >
-                <FontAwesomeIcon icon={faFacebook} size="2x" />
+                <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
             <a
                 href="https://www.twitter.com/gregparr"
-                className={`${socialFollowStyles.twitter} ${socialFollowStyles.social}`}>
-                <FontAwesomeIcon icon={faTwitter} size="2x" />
-            </a>
-            <a
-                href="https://www.instagram.com/greg81uk"
-                className={`${socialFollowStyles.instagram} ${socialFollowStyles.social}`}
+                className={`${socialFollowStyles.twitter} ${socialFollowStyles.social}`}
+                target="_blank"
             >
-                <FontAwesomeIcon icon={faInstagram} size="2x" />
+                <FontAwesomeIcon icon={faTwitter} size="2x" />
             </a>
         </div>
     )

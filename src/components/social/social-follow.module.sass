@@ -1,3 +1,7 @@
+$linkedin-colour: #0077B5
+$github-colour: black
+$twitter-colour: #49a1eb
+    
 .social-container
     background: #eee
     padding: 25px 50px
@@ -10,16 +14,20 @@ a.social
     &:hover
         transform: translateY(-2px)
 
-a.youtube
-    color: #eb3223
+a.linkedin
+    color: $linkedin-colour
 
-a.facebook
-    color: #4968ad
+    &:hover
+        color: lighten($linkedin-colour, 5%)
+
+a.github
+    color: $github-colour
+
+    &:hover
+        color: lighten($github-colour, 5%)
 
 a.twitter
-    color: #49a1eb
+    color: $twitter-colour
 
-a.instagram
-    color: black
-
-
+    &:hover
+        color: lighten($twitter-colour, 5%)
